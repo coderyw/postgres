@@ -1,4 +1,4 @@
-module github/coderyw/postgres
+module github.com/coderyw/postgres
 
 go 1.19
 
