@@ -27,6 +27,7 @@ type Config struct {
 	WithoutQuotingCheck  bool
 	PreferSimpleProtocol bool
 	WithoutReturning     bool
+	WithoutLastInsert    bool
 	Conn                 gorm.ConnPool
 }
 
@@ -82,6 +83,7 @@ func (dialector Dialector) Initialize(db *gorm.DB) (err error) {
 		callbackConfig.UpdateClauses = append(callbackConfig.UpdateClauses, "RETURNING")
 		callbackConfig.DeleteClauses = append(callbackConfig.DeleteClauses, "RETURNING")
 	}
+	callbackConfig.WithoutLastInsertId = dialector.WithoutLastInsert
 	callbacks.RegisterDefaultCallbacks(db, callbackConfig)
 
 	if dialector.Conn != nil {
