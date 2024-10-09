@@ -3,8 +3,8 @@ module github.com/coderyw/postgres
 go 1.19
 
 require (
+	github.com/coderyw/gorm v0.0.5
 	github.com/jackc/pgx/v5 v5.5.5
-	gorm.io/gorm v1.25.12
 )
 
 require (
@@ -16,9 +16,10 @@ require (
 	golang.org/x/crypto v0.17.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
+	gorm.io/gorm v1.25.12 // indirect
 )
 
-replace gorm.io/gorm v1.25.12 => github.com/coderyw/gorm v0.0.5
+//replace gorm.io/gorm v1.25.12 => github.com/coderyw/gorm v0.0.5
 
 //replace gorm.io/gorm v1.25.12 => ../gorm
 

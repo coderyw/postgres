@@ -6,11 +6,11 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/coderyw/gorm"
+	"github.com/coderyw/gorm/clause"
+	"github.com/coderyw/gorm/migrator"
+	"github.com/coderyw/gorm/schema"
 	"github.com/jackc/pgx/v5"
-	"gorm.io/gorm"
-	"gorm.io/gorm/clause"
-	"gorm.io/gorm/migrator"
-	"gorm.io/gorm/schema"
 )
 
 // See https://stackoverflow.com/questions/2204058/list-columns-with-indexes-in-postgresql

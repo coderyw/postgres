@@ -3,7 +3,7 @@ package postgres
 import (
 	"encoding/json"
 
-	"gorm.io/gorm"
+	"github.com/coderyw/gorm"
 
 	"github.com/jackc/pgx/v5/pgconn"
 )
